@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS photos;
+
+CREATE DATABASE photos;
+
+USE photos;
+
+CREATE TABLE photos (
+  id INT NOT NULL AUTO_INCREMENT,
+  Listing_id INT NOT NULL,
+  photoUrl TEXT,
+  PRIMARY KEY (id)
+);

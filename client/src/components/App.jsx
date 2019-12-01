@@ -9,6 +9,8 @@ class App extends React.Component {
     };
   }
 
+  // need to create get to update state with data
+
   render() {
     return (
       <div>

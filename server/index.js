@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
 const express = require('express');
+const path = require('path');
 const db = require('../database/index');
 
+const app = express();
 const PORT = 3000 || process.env.PORT;
 
-const app = express();
-
+app.use(express.static(path.resolve(__dirname, '..', 'public')));
 app.use(express.json());
 
 app.get('/api/photos', (req, res) => {

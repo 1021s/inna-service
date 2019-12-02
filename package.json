@@ -48,5 +48,10 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.16.0",
     "eslint-plugin-react-hooks": "1.7.0"
+  },
+  "jest": {
+    "rootDir": "__tests__",
+    "setupFilesAfterEnv": ["<rootDir>/setupTests.js"],
+    "testRegex": "/__tests__/.*\\.test\\.(js|jsx)$"
   }
 }

@@ -15,7 +15,8 @@ class App extends React.Component {
     };
 
     this.getPhotos = this.getPhotos.bind(this);
-    this.showModal = this.showModal.bind(this);
+    this.changeModalView = this.changeModalView.bind(this);
+    this.renderModal = this.renderModal.bind(this);
   }
 
   componentDidMount() {
@@ -36,8 +37,20 @@ class App extends React.Component {
       });
   }
 
-  showModal() {
+  changeModalView() {
+    const { modalIsVisible } = this.state;
 
+    this.setState({
+      modalIsVisible: !modalIsVisible,
+    });
+  }
+
+  renderModal() {
+    const { modalIsVisible, photos } = this.state;
+
+    if (modalIsVisible === true) {
+      return <Modal photos={photos} />;
+    }
   }
 
   render() {
@@ -45,11 +58,11 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          {/* <Modal photos={photos} /> */}
+          {this.renderModal()}
         </div>
         <div className="photo-container">
           <div>
-            <PhotoGallery photos={photos} />
+            <PhotoGallery photos={photos} changeModalView={this.changeModalView} />
             <div className="not-my-module">
               <p>Something goes here</p>
             </div>

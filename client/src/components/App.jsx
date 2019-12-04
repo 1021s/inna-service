@@ -12,11 +12,17 @@ class App extends React.Component {
     this.state = {
       photos: [],
     };
+
+    this.getPhotos = this.getPhotos.bind(this);
   }
 
   // need to create get to update state with data
   componentDidMount() {
-    axios.get('/api/photos/10')
+    this.getPhotos();
+  }
+
+  getPhotos() {
+    return axios.get('/api/photos/10')
       .then((photos) => {
         this.setState({
           photos: photos.data.images,
@@ -26,9 +32,6 @@ class App extends React.Component {
         if (err) {
           console.log(err);
         }
-      })
-      .finally(() => {
-
       });
   }
 

@@ -57,6 +57,9 @@
     "setupFilesAfterEnv": [
       "<rootDir>/setupTests.js"
     ],
-    "testRegex": "/__tests__/.*\\.test\\.(js|jsx)$"
+    "testRegex": "/__tests__/.*\\.test\\.(js|jsx)$",
+    "moduleNameMapper":{
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/cssMock.js"
+    }
   }
 }

@@ -11,12 +11,13 @@ class App extends React.Component {
 
     this.state = {
       photos: [],
+      modalIsVisible: false,
     };
 
     this.getPhotos = this.getPhotos.bind(this);
+    this.showModal = this.showModal.bind(this);
   }
 
-  // need to create get to update state with data
   componentDidMount() {
     this.getPhotos();
   }
@@ -33,6 +34,10 @@ class App extends React.Component {
           console.log(err);
         }
       });
+  }
+
+  showModal() {
+
   }
 
   render() {

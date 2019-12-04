@@ -7,8 +7,8 @@ import '../css-components/PhotoGallery.css';
 const PhotoGallery = ({ photos }) => (
   <div className="gallery-div">
     <img className="main-image" src={photos[2]} alt="random pic for house listing" />
-    {photos.map((photo) => (
-      <PhotoGalleryItem key={photo} photo={photo} />
+    {photos.map((photo, idx) => (
+      <PhotoGalleryItem key={`${idx}${photo}`} photo={photo} />
     ))}
   </div>
 );

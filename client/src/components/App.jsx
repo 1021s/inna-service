@@ -40,7 +40,7 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <Modal photos={photos} />
+          {/* <Modal photos={photos} /> */}
         </div>
         <div className="photo-container">
           <div>

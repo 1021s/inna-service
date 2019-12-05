@@ -1,3 +1,7 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
@@ -14,7 +18,7 @@ const ModalContent = ({
 
   return (
     <div className="modal-content-container">
-      <p className="modal-photos-link">Photos</p>
+      <p className="modal-photos-link" onClick={resetSlideCount}>Photos</p>
       <button className="left-btn" type="button" onClick={previousImage}>{'<'}</button>
       {photos.map((photo, idx) => {
         if (photos.indexOf(photo) === slideCount) {

@@ -21,6 +21,7 @@ class App extends React.Component {
     this.nextImage = this.nextImage.bind(this);
     this.previousImage = this.previousImage.bind(this);
     this.resetSlideCount = this.resetSlideCount.bind(this);
+    this.setImageSlideCount = this.setImageSlideCount.bind(this);
   }
 
   componentDidMount() {
@@ -39,6 +40,12 @@ class App extends React.Component {
           console.log(err);
         }
       });
+  }
+
+  setImageSlideCount(imageIndex) {
+    this.setState({
+      slideCount: imageIndex,
+    });
   }
 
   changeModalView() {
@@ -106,7 +113,7 @@ class App extends React.Component {
         </div>
         <div className="photo-container">
           <div>
-            <PhotoGallery photos={photos} changeModalView={this.changeModalView} />
+            <PhotoGallery photos={photos} changeModalView={this.changeModalView} setImageSlideCount={this.setImageSlideCount} />
             <div className="not-my-module">
               <p>Something goes here</p>
             </div>

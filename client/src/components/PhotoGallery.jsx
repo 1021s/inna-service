@@ -7,11 +7,11 @@ import PropTypes from 'prop-types';
 import PhotoGalleryItem from './PhotoGalleryItem';
 import '../css-components/PhotoGallery.css';
 
-const PhotoGallery = ({ photos, changeModalView }) => (
+const PhotoGallery = ({ photos, changeModalView, setImageSlideCount }) => (
   <div className="gallery-div">
     <img className="main-image" src={photos[2]} alt="random pic for house listing" onClick={changeModalView} />
     {photos.map((photo, idx) => (
-      <PhotoGalleryItem key={`${idx}${photo}`} photo={photo} changeModalView={changeModalView} />
+      <PhotoGalleryItem key={`${idx}${photo}`} idx={idx} photo={photo} changeModalView={changeModalView} setImageSlideCount={setImageSlideCount}/>
     ))}
   </div>
 );
@@ -19,6 +19,7 @@ const PhotoGallery = ({ photos, changeModalView }) => (
 PhotoGallery.propTypes = {
   photos: PropTypes.array.isRequired,
   changeModalView: PropTypes.func.isRequired,
+  setImageSlideCount: PropTypes.func.isRequired,
 };
 
 

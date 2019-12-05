@@ -19,11 +19,16 @@
 .carousel-counter {
   position: absolute;
   display: inline-block;
-  right: 10px;
-  top: 10px;
-  background-color: black;
+  right: 590px;
+  top: 190px;
+  min-width: 30px;
+  border-radius: 3px;
+  padding: 5px 9px;
+  zoom: 1;
   opacity: 0.8;
-  color: white;
+  color: #fff;
+  background-color: #2a2a33;
+  z-index: 4;
 
 }
 
@@ -47,7 +52,9 @@
   border: 1px solid #ddd;
   font-size: 25px;
   padding: 20px 10px;
-  color: #ddd;
+  color: #fff;
+  opacity: .5;
+  text-align: center;
 }
 
 .right-btn {
@@ -58,7 +65,9 @@
   border: 1px solid #ddd;
   font-size: 25px;
   padding: 20px 10px;
-  color: #ddd;
+  color: #fff;
+  opacity: .5;
+  text-align: center;
 }
 
 .exit-btn {
@@ -75,7 +84,7 @@
   position: absolute;
   bottom: 1%;
   left: 38%;
-  color: white;
+  color: #ffffff;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -93,26 +102,27 @@
 }
 
 .take-a-tour-btn {
-  color: #fff;
+  color: #ffffff;
   border: #006aff solid 1px;
-  border-radius: 2px;
+  border-radius: 3px;
   background-color: #006aff;
-  padding: 3px;
+  padding: 3px 10.05px;
   font-size: 15px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .save-home-btn {
   background: transparent;
-  color: white;
+  color: #ffffff;
   border: none;
   font-size: 15px;
   margin-left: 46.5px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .share-btn {
   background: transparent;
-  color: white;
+  color: #ffffff;
   border: none;
   font-size: 15px;
   margin-left: 46.5px;

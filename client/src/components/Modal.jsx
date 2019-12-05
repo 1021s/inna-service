@@ -7,7 +7,7 @@ import ModalContent from './ModalContent';
 import '../css-components/Modal.css';
 
 const Modal = ({
-  photos, changeModalView, nextImage, previousImage,
+  photos, changeModalView, nextImage, previousImage, resetSlideCount, slideCount,
 }) => (
   <div className="modal-container">
     <div className="mask" />
@@ -16,6 +16,8 @@ const Modal = ({
       changeModalView={changeModalView}
       nextImage={nextImage}
       previousImage={previousImage}
+      resetSlideCount={resetSlideCount}
+      slideCount={slideCount}
     />
   </div>
 );
@@ -25,6 +27,8 @@ Modal.propTypes = {
   changeModalView: PropTypes.func.isRequired,
   nextImage: PropTypes.func.isRequired,
   previousImage: PropTypes.func.isRequired,
+  resetSlideCount: PropTypes.func.isRequired,
+  slideCount: PropTypes.number.isRequired,
 };
 
 export default Modal;

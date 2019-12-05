@@ -20,6 +20,7 @@ class App extends React.Component {
     this.renderModal = this.renderModal.bind(this);
     this.nextImage = this.nextImage.bind(this);
     this.previousImage = this.previousImage.bind(this);
+    this.resetSlideCount = this.resetSlideCount.bind(this);
   }
 
   componentDidMount() {
@@ -48,6 +49,16 @@ class App extends React.Component {
     });
   }
 
+  resetSlideCount() {
+    const { slideCount } = this.state;
+
+    if (slideCount !== 0) {
+      this.setState({
+        slideCount: 0,
+      });
+    }
+  }
+
   nextImage() {
     const { slideCount, photos } = this.state;
 
@@ -69,7 +80,7 @@ class App extends React.Component {
   }
 
   renderModal() {
-    const { modalIsVisible, photos } = this.state;
+    const { modalIsVisible, photos, slideCount } = this.state;
 
     if (modalIsVisible === true) {
       return (
@@ -78,12 +89,13 @@ class App extends React.Component {
           changeModalView={this.changeModalView}
           nextImage={this.nextImage}
           previousImage={this.previousImage}
+          resetSlideCount={this.resetSlideCount}
+          slideCount={slideCount}
         />
       );
     }
     return false;
   }
-
 
   render() {
     const { photos } = this.state;

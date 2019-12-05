@@ -19,7 +19,10 @@ const ModalContent = ({
       {photos.map((photo, idx) => {
         if (photos.indexOf(photo) === slideCount) {
           return (
-            <img key={`${idx}${photo}`} className="modal-image" src={photo} alt="pic" />
+            <div>
+              <img key={`${idx}${photo}`} className="modal-image" src={photo} alt="pic" />
+              <span className="carousel-counter">{`${idx + 1} of ${photos.length}`}</span>
+            </div>
           );
         }
       })}

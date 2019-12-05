@@ -12,8 +12,19 @@
   position: absolute;
   width: 400px;
   height: 600px;
-  top: 30%;
+  top: 20%;
   left: 38%
+}
+
+.carousel-counter {
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+  top: 10px;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+
 }
 
 .modal-photos-link {

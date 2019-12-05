@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css-components/ModalContent.css';
 
-const ModalContent = ({ photos }) => (
+const ModalContent = ({ photos, changeModalView }) => (
 
   <div className="modal-content-container">
     <p className="modal-photos-link">Photos</p>
@@ -21,7 +21,7 @@ const ModalContent = ({ photos }) => (
         <button className="share-btn" type="button">&#9993; Share</button>
       </li>
     </ul>
-    <button className="exit-btn" type="button">X</button>
+    <button className="exit-btn" type="button" onClick={changeModalView} >X</button>
     <p className="info">For Sale: $6,500,000 (7 beds, 9 baths, 6,838 sqft)</p>
   </div>
 
@@ -29,6 +29,7 @@ const ModalContent = ({ photos }) => (
 
 ModalContent.propTypes = {
   photos: PropTypes.array.isRequired,
+  changeModalView: PropTypes.func.isRequired,
 };
 
 export default ModalContent;

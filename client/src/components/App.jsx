@@ -49,8 +49,9 @@ class App extends React.Component {
     const { modalIsVisible, photos } = this.state;
 
     if (modalIsVisible === true) {
-      return <Modal photos={photos} />;
+      return <Modal photos={photos} changeModalView={this.changeModalView} />;
     }
+    return false;
   }
 
   render() {

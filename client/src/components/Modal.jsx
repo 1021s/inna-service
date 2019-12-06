@@ -43,23 +43,6 @@ class Modal extends React.Component {
   }
 }
 
-// const Modal = ({
-//   photos, changeModalView, nextImage, previousImage, resetSlideCount, slideCount, replay,
-// }) => (
-//     <div className="modal-container">
-//       <div className="mask" />
-//       <ModalContent
-//         photos={photos}
-//         changeModalView={changeModalView}
-//         nextImage={nextImage}
-//         previousImage={previousImage}
-//         resetSlideCount={resetSlideCount}
-//         slideCount={slideCount}
-//         replay={replay}
-//       />
-//     </div>
-//   );
-
 Modal.propTypes = {
   photos: PropTypes.array.isRequired,
   changeModalView: PropTypes.func.isRequired,

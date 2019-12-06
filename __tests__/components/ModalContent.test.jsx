@@ -35,9 +35,10 @@ describe('Modal content test', () => {
     expect(wrapper.find(`img[src="${photosMock[0]}"]`)).toHaveLength(1);
   });
 
-  it('should call function changeModalView on X(exit) button click', () => {
+  it('should call function changeModalView and resetSlideCount on X(exit) button click', () => {
     wrapper.find('.exit-btn').simulate('click');
 
+    expect(resetSlideCountFn).toHaveBeenCalled();
     expect(changeModalViewFn).toHaveBeenCalled();
   });
 
@@ -51,5 +52,17 @@ describe('Modal content test', () => {
     wrapper.find('.left-btn').simulate('click');
 
     expect(previousImageFn).toHaveBeenCalled();
+  });
+
+  it('should call function resetSlideCount on "photo link" click', () => {
+    wrapper.find('.modal-photos-link').simulate('click');
+
+    expect(resetSlideCountFn).toHaveBeenCalled();
+  });
+
+  it('should call function resetSlideCount on "replay" click', () => {
+    wrapper.find('.right-btn').simulate('click');
+
+    expect(resetSlideCountFn).toHaveBeenCalled();
   });
 });

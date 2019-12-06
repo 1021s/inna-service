@@ -6,10 +6,14 @@ import PhotoGalleryItem from '../../client/src/components/PhotoGalleryItem';
 
 describe('Photo Gallery Item tests', () => {
   const changeModalViewFn = jest.fn();
+  const setImageSlideCountFn = jest.fn();
+  const idxMock = 0;
 
   const wrapper = shallow(<PhotoGalleryItem
     changeModalView={changeModalViewFn}
     photo="photo"
+    setImageSlideCount={setImageSlideCountFn}
+    idx={idxMock}
   />);
 
   it('should call function changeModalView on image wrapper click', () => {

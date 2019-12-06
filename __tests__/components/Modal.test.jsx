@@ -17,12 +17,18 @@ describe('Modal tests', () => {
   const changeModalViewFn = jest.fn();
   const nextImageFn = jest.fn();
   const previousImageFn = jest.fn();
+  const resetSlideCountFn = jest.fn();
+  const slideCountMock = 0;
+  const replayMock = false;
 
   const wrapper = shallow(<Modal
     photos={photosMock}
     changeModalView={changeModalViewFn}
     nextImage={nextImageFn}
     previousImage={previousImageFn}
+    resetSlideCount={resetSlideCountFn}
+    slideCount={slideCountMock}
+    replay={replayMock}
   />);
 
   it('should render modal', () => {

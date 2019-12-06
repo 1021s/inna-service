@@ -31,7 +31,7 @@ describe('Modal content test', () => {
     replay={replayMock}
   />);
 
-  it('image src should be the first image in array', () => {
+  it('modal-image src should be the first image in array', () => {
     expect(wrapper.find(`img[src="${photosMock[0]}"]`)).toHaveLength(1);
   });
 

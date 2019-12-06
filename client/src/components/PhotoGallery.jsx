@@ -12,7 +12,7 @@ import '../css-components/PhotoGallery.css';
 const PhotoGallery = ({ photos, changeModalView, setImageSlideCount }) => (
   <div className="gallery-div">
     <img className="main-image" src={photos[0]} alt="random pic for house listing" onClick={changeModalView} />
-    {photos.map((photo, idx) => {
+    { photos.map((photo, idx) => {
       if (photos.indexOf(photo) !== 0) {
         return (
           <PhotoGalleryItem key={`${idx}${photo}`} idx={idx} photo={photo} changeModalView={changeModalView} setImageSlideCount={setImageSlideCount} />

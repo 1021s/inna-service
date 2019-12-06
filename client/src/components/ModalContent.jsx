@@ -20,17 +20,30 @@ const ModalContent = ({
     <div className="modal-content-container">
       <p className="modal-photos-link" onClick={resetSlideCount}>Photos</p>
       <button className="left-btn" type="button" onClick={previousImage}>{'<'}</button>
-      {photos.map((photo, idx) => {
-        if (photos.indexOf(photo) === slideCount) {
-          return (
+      <div className="carousel-wrapper">
+        <div className="image-carousel-wrapper">
+          {photos.length !== slideCount && (
             <div>
-              <img key={`${idx}${photo}`} className="modal-image" src={photo} alt="pic" />
-              <span className="carousel-counter">{`${idx + 1} of ${photos.length}`}</span>
+              <img key={`${slideCount}`} className="modal-image" src={photos[slideCount]} alt="pic" />
+              <span className="carousel-counter">{`${slideCount + 1} of ${photos.length}`}</span>
             </div>
-          );
-        }
-      })}
-      <button className="right-btn" type="button" onClick={nextImage}>{replay ? 'replay' : '>'}</button>
+          )}
+          {photos.length === slideCount && (
+            <div style={{ position: 'relative' }}>
+              <div className="modal-hero-text">
+                <p>Interested in touring this home?</p>
+                <button className="upsell-modal-take-tour-btn" type="button">Take a tour</button>
+              </div>
+              <div className="upsell-modal-image-mask" />
+              <img className="modal-image" src={photos[0]} alt="random pic for house listing" />
+            </div>
+          )}
+        </div>
+      </div>
+      {replay
+        && <button className="right-btn" type="button" onClick={resetSlideCount}>replay</button>}
+      {!replay
+        && <button className="right-btn" type="button" onClick={nextImage}>{'>'}</button>}
       <ul className="action-list">
         <li>
           <button className="take-a-tour-btn" type="button">Take a Tour</button>

@@ -58,39 +58,46 @@ class App extends React.Component {
   }
 
   resetSlideCount() {
-    const { slideCount } = this.state;
-
-    if (slideCount !== 0) {
+    const { slideCount, replay } = this.state;
+    if (slideCount === 0 && replay) {
+      this.setState({
+        replay: false,
+      });
+    } else if (slideCount !== 0) {
       this.setState({
         slideCount: 0,
+        replay: false,
       });
     }
   }
 
   nextImage() {
-    const { slideCount, photos, replay } = this.state;
+    const { slideCount, photos } = this.state;
 
-    if (slideCount !== photos.length - 1) {
+    if (slideCount === photos.length - 1) {
       this.setState({
+        replay: true,
         slideCount: slideCount + 1,
       });
-    } else if (slideCount === photos.length - 1) {
+    } else if (slideCount < photos.length) {
       this.setState({
-        replay: !replay,
+        slideCount: slideCount + 1,
       });
     }
   }
 
   previousImage() {
-    const { slideCount, replay } = this.state;
+    const { slideCount, photos } = this.state;
 
     if (slideCount !== 0) {
       this.setState({
         slideCount: slideCount - 1,
+        replay: false,
       });
     } else if (slideCount === 0) {
       this.setState({
-        replay: !replay,
+        replay: true,
+        slideCount: photos.length,
       });
     }
   }

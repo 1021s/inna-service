@@ -33,7 +33,7 @@ describe('Photo Gallery test', () => {
     expect(wrapper.find('PhotoGalleryItem')).toHaveLength(5);
   });
 
-  // it('image src should be the third image in array', () => {
-  //   expect(wrapper.find(`img[src="${photosMock[2]}"]`)).toHaveLength(1);
-  // });
+  it('upsell-image src & main-image src should be the first image in array', () => {
+    expect(wrapper.find(`img[src="${photosMock[0]}"]`)).toHaveLength(2);
+  });
 });

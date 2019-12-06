@@ -13,6 +13,7 @@ class App extends React.Component {
       photos: [],
       modalIsVisible: false,
       slideCount: 0,
+      replay: false,
     };
 
     this.getPhotos = this.getPhotos.bind(this);
@@ -67,27 +68,37 @@ class App extends React.Component {
   }
 
   nextImage() {
-    const { slideCount, photos } = this.state;
+    const { slideCount, photos, replay } = this.state;
 
     if (slideCount !== photos.length - 1) {
       this.setState({
         slideCount: slideCount + 1,
       });
+    } else if (slideCount === photos.length - 1) {
+      this.setState({
+        replay: !replay,
+      });
     }
   }
 
   previousImage() {
-    const { slideCount } = this.state;
+    const { slideCount, replay } = this.state;
 
     if (slideCount !== 0) {
       this.setState({
         slideCount: slideCount - 1,
       });
+    } else if (slideCount === 0) {
+      this.setState({
+        replay: !replay,
+      });
     }
   }
 
   renderModal() {
-    const { modalIsVisible, photos, slideCount } = this.state;
+    const {
+      modalIsVisible, photos, slideCount, replay,
+    } = this.state;
 
     if (modalIsVisible === true) {
       return (
@@ -98,6 +109,7 @@ class App extends React.Component {
           previousImage={this.previousImage}
           resetSlideCount={this.resetSlideCount}
           slideCount={slideCount}
+          replay={replay}
         />
       );
     }
@@ -113,7 +125,11 @@ class App extends React.Component {
         </div>
         <div className="photo-container">
           <div>
-            <PhotoGallery photos={photos} changeModalView={this.changeModalView} setImageSlideCount={this.setImageSlideCount} />
+            <PhotoGallery
+              photos={photos}
+              changeModalView={this.changeModalView}
+              setImageSlideCount={this.setImageSlideCount}
+            />
             <div className="not-my-module">
               <p>Something goes here</p>
             </div>

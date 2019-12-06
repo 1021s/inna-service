@@ -4,7 +4,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../css-components/PhotoGalleryItem.css';
 
-const PhotoGalleryItem = ({ photo, changeModalView, setImageSlideCount, idx }) => {
+const PhotoGalleryItem = (
+  {
+    photo, changeModalView, setImageSlideCount, idx,
+  },
+) => {
   const handleClick = (photoIdx) => {
     setImageSlideCount(photoIdx);
     changeModalView();

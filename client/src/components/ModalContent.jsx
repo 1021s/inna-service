@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import '../css-components/ModalContent.css';
 
 const ModalContent = ({
-  photos, changeModalView, nextImage, previousImage, resetSlideCount, slideCount,
+  photos, changeModalView, nextImage, previousImage, resetSlideCount, slideCount, replay,
 }) => {
   const handleClick = () => {
     changeModalView();
@@ -30,7 +30,7 @@ const ModalContent = ({
           );
         }
       })}
-      <button className="right-btn" type="button" onClick={nextImage}>{'>'}</button>
+      <button className="right-btn" type="button" onClick={nextImage}>{replay ? 'replay' : '>'}</button>
       <ul className="action-list">
         <li>
           <button className="take-a-tour-btn" type="button">Take a Tour</button>
@@ -55,6 +55,7 @@ ModalContent.propTypes = {
   previousImage: PropTypes.func.isRequired,
   resetSlideCount: PropTypes.func.isRequired,
   slideCount: PropTypes.number.isRequired,
+  replay: PropTypes.bool.isRequired,
 };
 
 export default ModalContent;

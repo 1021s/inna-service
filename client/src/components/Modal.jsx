@@ -6,21 +6,59 @@ import PropTypes from 'prop-types';
 import ModalContent from './ModalContent';
 import '../css-components/Modal.css';
 
-const Modal = ({
-  photos, changeModalView, nextImage, previousImage, resetSlideCount, slideCount,
-}) => (
-  <div className="modal-container">
-    <div className="mask" />
-    <ModalContent
-      photos={photos}
-      changeModalView={changeModalView}
-      nextImage={nextImage}
-      previousImage={previousImage}
-      resetSlideCount={resetSlideCount}
-      slideCount={slideCount}
-    />
-  </div>
-);
+class Modal extends React.Component {
+  componentDidMount() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  componentWillUnmount() {
+    document.body.style.overflow = 'auto';
+  }
+
+  render() {
+    const {
+      photos,
+      changeModalView,
+      nextImage,
+      previousImage,
+      resetSlideCount,
+      slideCount,
+      replay,
+    } = this.props;
+
+    return (
+      <div className="modal-container">
+        <div className="mask" />
+        <ModalContent
+          photos={photos}
+          changeModalView={changeModalView}
+          nextImage={nextImage}
+          previousImage={previousImage}
+          resetSlideCount={resetSlideCount}
+          slideCount={slideCount}
+          replay={replay}
+        />
+      </div>
+    );
+  }
+}
+
+// const Modal = ({
+//   photos, changeModalView, nextImage, previousImage, resetSlideCount, slideCount, replay,
+// }) => (
+//     <div className="modal-container">
+//       <div className="mask" />
+//       <ModalContent
+//         photos={photos}
+//         changeModalView={changeModalView}
+//         nextImage={nextImage}
+//         previousImage={previousImage}
+//         resetSlideCount={resetSlideCount}
+//         slideCount={slideCount}
+//         replay={replay}
+//       />
+//     </div>
+//   );
 
 Modal.propTypes = {
   photos: PropTypes.array.isRequired,
@@ -29,6 +67,7 @@ Modal.propTypes = {
   previousImage: PropTypes.func.isRequired,
   resetSlideCount: PropTypes.func.isRequired,
   slideCount: PropTypes.number.isRequired,
+  replay: PropTypes.bool.isRequired,
 };
 
 export default Modal;

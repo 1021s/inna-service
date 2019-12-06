@@ -1,3 +1,7 @@
+body {
+  margin: 0px;
+}
+
 .photo-container {
   display: flex;
   flex-direction: column;
@@ -11,6 +15,6 @@
   float: left;
   width: 500px;
   height: 100vh;
-  background-color: rgb(203, 239, 255);
+  /* background-color: rgb(203, 239, 255); */
 }
 

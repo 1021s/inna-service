@@ -31,6 +31,14 @@ describe('Modal content test', () => {
     replay={replayMock}
   />);
 
+  it('should render modal content', () => {
+    expect(wrapper.find('.modal-content-container')).toHaveLength(1);
+  });
+
+  it('should render image carousel', () => {
+    expect(wrapper.find('.carousel-wrapper')).toHaveLength(1);
+  });
+
   it('modal-image src should be the first image in array', () => {
     expect(wrapper.find(`img[src="${photosMock[0]}"]`)).toHaveLength(1);
   });

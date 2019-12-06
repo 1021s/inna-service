@@ -19,6 +19,7 @@ describe('Photo Gallery Item tests', () => {
   it('should call function changeModalView on image wrapper click', () => {
     wrapper.find('.image-div').simulate('click');
 
+    expect(setImageSlideCountFn).toHaveBeenCalled();
     expect(changeModalViewFn).toHaveBeenCalled();
   });
 

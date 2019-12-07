@@ -139,8 +139,16 @@
   color: #ffffff;
   border: none;
   font-size: 15px;
-  margin-left: 46.5px;
+  margin-left: 0.5px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.share-icon-mail {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 25px;
+  margin-left: 42.5px;
 }
 
 .upsell-modal-image-mask {
@@ -158,8 +166,10 @@
   border: #006aff solid 1px;
   border-radius: 3px;
   background-color: #006aff;
-  padding: 3px 10.05px;
-  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 50%;
+  font-size: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -167,8 +177,10 @@
   color: #fff;
   position: absolute;
   z-index: 5;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
   top: 40%;
-  left: 100px;
+  left: 45px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

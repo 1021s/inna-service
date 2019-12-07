@@ -24,7 +24,7 @@ const ModalContent = ({
         <div className="image-carousel-wrapper">
           {photos.length !== slideCount && (
             <div>
-              <img key={`${slideCount}`} className="modal-image" src={photos[slideCount]} alt="pic" />
+              <img key={`${slideCount}`} className="modal-image" src={photos[slideCount]} alt="pic" onClick={nextImage} />
               <span className="carousel-counter">{`${slideCount + 1} of ${photos.length}`}</span>
             </div>
           )}
@@ -41,7 +41,7 @@ const ModalContent = ({
         </div>
       </div>
       {replay
-        && <button className="right-btn" type="button" onClick={resetSlideCount}>replay</button>}
+        && <button className="right-btn" type="button" onClick={resetSlideCount}>&#x27F2;</button>}
       {!replay
         && <button className="right-btn" type="button" onClick={nextImage}>{'>'}</button>}
       <ul className="action-list">
@@ -52,7 +52,10 @@ const ModalContent = ({
           <button className="save-home-btn" type="button">&#10084; Save Home</button>
         </li>
         <li>
-          <button className="share-btn" type="button">&#9993; Share</button>
+          <span className="share-icon-mail">&#9993;</span>
+          <button className="share-btn" type="button">
+            Share
+          </button>
         </li>
       </ul>
       <button className="exit-btn" type="button" onClick={handleClick}>X</button>

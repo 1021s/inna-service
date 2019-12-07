@@ -1,2 +1,3 @@
 node_modules
-dist/bundle.js
+public/dist/bundle.js
+__tests__/coverage

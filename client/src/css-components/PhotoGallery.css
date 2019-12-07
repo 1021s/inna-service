@@ -1,0 +1,36 @@
+.gallery-div {
+  width: 405px;
+  float: left;
+}
+
+.main-image {
+  width: 400px;
+}
+
+.upsell-image-mask {
+  position: absolute;
+  background-color: #0A0A1A;
+  opacity: 0.5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero-text {
+  color: #fff;
+  position: absolute;
+  top: 90px;
+  z-index: 5;
+  font-weight: 600;
+}
+
+.upsell-take-tour-btn {
+  color: #fff;
+  border: #006aff solid 1px;
+  border-radius: 3px;
+  background-color: #006aff;
+  padding: 3px 10.05px;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

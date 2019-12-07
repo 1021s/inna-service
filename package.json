@@ -53,13 +53,17 @@
     "eslint-plugin-react-hooks": "1.7.0"
   },
   "jest": {
-    "rootDir": "__tests__",
+    "rootDir": "./",
     "setupFilesAfterEnv": [
-      "<rootDir>/setupTests.js"
+      "<rootDir>/__tests__/setupTests.js"
     ],
-    "testRegex": "/__tests__/.*\\.test\\.(js|jsx)$",
+    "collectCoverage": true,
+    "testMatch": [
+      "<rootDir>/__tests__/**/*.test.js",
+      "<rootDir>/__tests__/**/*.test.jsx"
+    ],
     "moduleNameMapper":{
-      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/cssMock.js"
+      "\\.(css|less|sass|scss)$": "<rootDir>/__tests__/__mocks__/cssMock.js"
     }
   }
 }

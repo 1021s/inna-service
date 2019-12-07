@@ -24,7 +24,7 @@ const ModalContent = ({
         <div className="image-carousel-wrapper">
           {photos.length !== slideCount && (
             <div>
-              <img key={`${slideCount}`} className="modal-image" src={photos[slideCount]} alt="pic" onClick={nextImage} />
+              <img key={`${slideCount}`} className="modal-image" src={photos[slideCount]} alt="pic" onClick={nextImage}/>
               <span className="carousel-counter">{`${slideCount + 1} of ${photos.length}`}</span>
             </div>
           )}
@@ -49,7 +49,8 @@ const ModalContent = ({
           <button className="take-a-tour-btn" type="button">Take a Tour</button>
         </li>
         <li>
-          <button className="save-home-btn" type="button">&#10084; Save Home</button>
+          <span className="home-icon">&#10084;</span>
+          <button className="save-home-btn" type="button">Save Home</button>
         </li>
         <li>
           <span className="share-icon-mail">&#9993;</span>

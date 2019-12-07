@@ -25,11 +25,14 @@ axios.get.mockResolvedValue(resp);
 describe('First React component test with Enzyme', () => {
   const wrapper = shallow(<App />);
 
-  // it('should have an "h1" header tag', () => {
-  //   expect(wrapper.find('h1')).toHaveLength(1);
-  // });
-
   it('should have default state', () => {
+    expect(wrapper.state('replay')).toBe(false);
+    expect(wrapper.state('slideCount')).toBe(0);
+    expect(wrapper.state('modalIsVisible')).toBe(false);
     expect(wrapper.state('photos')).toEqual(resp.data.images);
+  });
+
+  it('should render photo gallery', () => {
+    expect(wrapper.find('PhotoGallery')).toHaveLength(1);
   });
 });

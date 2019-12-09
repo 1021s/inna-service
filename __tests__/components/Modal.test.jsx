@@ -39,4 +39,8 @@ describe('Modal tests', () => {
   it('should render modal content', () => {
     expect(wrapper.find('ModalContent')).toHaveLength(1);
   });
+
+  it('should set overflow to "auto" after function componentWillUnmount is called', () => {
+    wrapper.instance().componentWillUnmount();
+  });
 });

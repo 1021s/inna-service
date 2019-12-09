@@ -35,4 +35,11 @@ describe('First React component test with Enzyme', () => {
   it('should render photo gallery', () => {
     expect(wrapper.find('PhotoGallery')).toHaveLength(1);
   });
+
+  it('should render modal when renderModal function is called', () => {
+    wrapper.setState({ modalIsVisible: true });
+    wrapper.instance().renderModal();
+
+    expect(wrapper.find('Modal')).toHaveLength(1);
+  });
 });

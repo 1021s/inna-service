@@ -31,8 +31,8 @@ class App extends React.Component {
 
   getPhotos() {
     const parsedUrl = new URL(window.location.href);
-    const id = parsedUrl.searchParams.get('id') ? parsedUrl.searchParams.get('id') : 0;
-    return axios.get(`/api/photos/${id}`)
+    // const id = parsedUrl.searchParams.get('id') ? parsedUrl.searchParams.get('id') : 0;
+    return axios.get(`/api/photos/${parsedUrl.href.slice(-2)}`)
       .then((photos) => {
         this.setState({
           photos: photos.data.images,

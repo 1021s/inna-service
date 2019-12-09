@@ -52,8 +52,8 @@ const writeFileToS3 = (dirIdx, fileIdx) => {
 };
 
 for (let i = 0; i < 100; i += 1) {
-  setTimeout(() => { writeFileToS3(i, 'one'); }, 2000);
-  setTimeout(() => { writeFileToS3(i, 'two'); }, 7000);
+  setTimeout(() => { writeFileToS3(i, 'one'); }, 3000);
+  setTimeout(() => { writeFileToS3(i, 'two'); }, 8000);
   setTimeout(() => { writeFileToS3(i, 'three'); }, 15000);
   setTimeout(() => { writeFileToS3(i, 'four'); }, 26000);
   setTimeout(() => { writeFileToS3(i, 'five'); }, 39000);

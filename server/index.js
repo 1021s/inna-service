@@ -4,7 +4,7 @@ const path = require('path');
 const db = require('../database/index');
 
 const app = express();
-const PORT = 3000 || process.env.PORT;
+const PORT = 3005 || process.env.PORT;
 
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
 app.use(express.json());

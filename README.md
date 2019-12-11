@@ -1,8 +1,6 @@
 # inna-service
 Photo Modal Carousel
 
-To run the seeding script, in the terminal run, npm run seed.
-
 To run the build script, in the terminal run, npm run build.
 
 If you want to have watch set up with your build, you can run in the terminal, npm run watch.

@@ -139,9 +139,9 @@ class App extends React.Component {
               changeModalView={this.changeModalView}
               setImageSlideCount={this.setImageSlideCount}
             />
-            <div className="not-my-module">
+            {/* <div className="not-my-module">
               <p>Something goes here</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

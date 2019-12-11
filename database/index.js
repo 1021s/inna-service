@@ -3,6 +3,7 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: 'host.docker.internal',
+  // host: 'localhost',
   user: 'root',
   database: 'photos',
 });

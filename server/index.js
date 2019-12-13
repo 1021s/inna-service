@@ -40,6 +40,7 @@ app.get('/api/photos', (req, res) => {
 app.get('/api/photos/:id', (req, res) => {
   db.query(`SELECT * FROM photos WHERE Listing_id = ${req.params.id}`, (err, data) => {
     if (err) {
+      console.error(err);
       res.sendStatus(500);
     } else {
       if (data.length === 0) {

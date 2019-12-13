@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  innaservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - 'database'
+    ports:
+      - "3005:3005"
+    depends_on:
+      - 'database'
+  database:
+    image: mysql/mysql-server:5.7
+    # volumes:
+    #   - ./data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'photos'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'root'
+      # You can use whatever password you like
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '3306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'

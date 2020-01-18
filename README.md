@@ -1,10 +1,22 @@
-# inna-service
-Photo Modal Carousel
+# Home Listing Application
+> Photo Modal Carousel
 
-To run the build script, in the terminal run, npm run build.
+To build,run the command:
+```sh
+npm run build
+```
 
-If you want to have watch set up with your build, you can run in the terminal, npm run watch.
+If you want to have watch set up with your build, run the command:
+```sh
+npm run watch
+```
 
-To start the server just run in the terminal, npm start.
+To start the server:
+```sh
+npm start
+```
 
-To run the test, in terminal run, npm test.
+To run tests, run the command:
+```sh
+npm test
+```

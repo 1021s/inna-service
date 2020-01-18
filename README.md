@@ -1,7 +1,13 @@
-# ZHome - Home Listing Application
+# ZHome - House Listing Application
 > Photo Modal Carousel
 
 ![](ZhomeReadMe.png)
+![](ModalImageReadMe.png)
+
+Before you start, install the dependencies:
+```sh
+npm install
+```
 
 To build, run the command:
 ```sh

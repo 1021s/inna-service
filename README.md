@@ -1,7 +1,7 @@
 # ZHome - Home Listing Application
 > Photo Modal Carousel
 
-![](ZHomeReadMe.png)
+![](ZhomeReadMe.png)
 
 To build, run the command:
 ```sh

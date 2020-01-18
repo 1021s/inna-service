@@ -16,7 +16,7 @@ const PhotoGalleryItem = (
 
   return (
     <div className="image-div" onClick={() => { handleClick(idx); }}>
-      <img src={photo} alt="random pic for house listing" />
+      <img src={photo} alt="random pic for house listing" style={{ width: '100%' }} />
     </div>
   );
 };

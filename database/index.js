@@ -2,8 +2,12 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
+  // host: 'database',
   host: 'localhost',
-  user: 'root',
+  // host: 'localhost',
+  // port: '3007',
+  user: 'inna',
+  password: 'thisisacoolpassword',
   database: 'photos',
 });
 
@@ -12,7 +16,7 @@ connection.connect((err) => {
     console.log(err);
   }
 
-  console.log('Connected to mysql');
+  console.log('Connected to mysql  to host database');
 });
 
 module.exports = connection;

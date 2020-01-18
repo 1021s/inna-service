@@ -1,10 +1,10 @@
-.gallery-div {
+/* .gallery-div {
   width: 405px;
   float: left;
-}
+} */
 
 .main-image {
-  width: 400px;
+  width: 100%;
 }
 
 .upsell-image-mask {

@@ -8,7 +8,7 @@
     "build": "webpack",
     "watch": "webpack -w",
     "seed": "node ./scripts/upload-to-aws-bucket.js",
-    "start": "nodemon ./server/index.js"
+    "start": "webpack && node ./server/index.js"
   },
   "repository": {
     "type": "git",
